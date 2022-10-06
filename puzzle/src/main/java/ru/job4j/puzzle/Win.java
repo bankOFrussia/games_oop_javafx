@@ -17,8 +17,8 @@ public class Win {
 
     public static boolean isVerticalWin(int[][] board, int column) {
         boolean rsl = true;
-        for (int i = 0; i < board.length; i++) {
-            if (board[i][column] != 1) {
+        for (int[] ints : board) {
+            if (ints[column] != 1) {
                 rsl = false;
                 break;
             }
