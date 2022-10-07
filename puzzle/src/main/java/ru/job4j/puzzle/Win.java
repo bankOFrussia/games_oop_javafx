@@ -7,9 +7,6 @@ public class Win {
             if (board[i][i] == 1 && (isVerticalWin(board, i) || isHorizontalWin(board, i))) {
                 rsl = true;
                 break;
-            } else if(board[2][2] == 1 && isDiagonalWin(board)) {
-                rsl = true;
-                break;
             }
         }
         return rsl;
@@ -34,17 +31,6 @@ public class Win {
                 break;
             }
         }
-        return rsl;
-    }
-
-    public static boolean isDiagonalWin(int[][] board) {
-        boolean rsl = true;
-            for (int i = 0; i < board.length; i++) {
-                if (board[i][i] != 1 && board[board.length - 1 - i][i] != 1) {
-                    rsl = false;
-                    break;
-                }
-            }
         return rsl;
     }
 }
